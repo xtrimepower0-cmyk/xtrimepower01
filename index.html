@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>XTrime Power - Order Now</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+  background:#f3f3f3;
+  color:#222;
+}
+
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:12px;
+}
+
+.header{
+  background:#d60000;
+  color:white;
+  text-align:center;
+  padding:14px;
+  font-size:22px;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+.card{
+  background:white;
+  margin-top:12px;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 2px 8px #ddd;
+}
+
+.product-image{
+  width:100%;
+  max-width:500px;
+  display:block;
+  margin:auto;
+  border-radius:8px;
+}
+
+h1{
+  text-align:center;
+  margin:15px 0;
+  font-size:30px;
+}
+
+.price{
+  text-align:center;
+  margin:10px 0 15px;
+}
+
+.old{
+  color:#888;
+  text-decoration:line-through;
+  font-size:22px;
+}
+
+.new{
+  color:#d60000;
+  font-size:36px;
+  font-weight:bold;
+  margin-left:8px;
+}
+
+.offer{
+  background:#fff000;
+  text-align:center;
+  padding:12px;
+  border-radius:7px;
+  font-size:19px;
+  font-weight:bold;
+}
+
+.features{
+  margin-top:15px;
+}
+
+.features div{
+  background:#f7f7f7;
+  margin:7px 0;
+  padding:12px;
+  border-radius:6px;
+  font-size:17px;
+}
+
+.order-title{
+  text-align:center;
+  font-size:26px;
+  margin-bottom:18px;
+}
+
+label{
+  display:block;
+  font-weight:bold;
+  margin:12px 0 6px;
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #bbb;
+  border-radius:6px;
+  font-size:16px;
+}
+
+textarea{
+  height:90px;
+}
+
+.quantity{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:10px 0;
+}
+
+.quantity button{
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:6px;
+  background:#222;
+  color:white;
+  font-size:25px;
+}
+
+.quantity input{
+  width:70px;
+  text-align:center;
+}
+
+.summary{
+  background:#f5f5f5;
+  padding:15px;
+  margin:15px 0;
+  border-radius:7px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  padding:6px 0;
+}
+
+.total{
+  border-top:1px solid #ccc;
+  margin-top:8px;
+  padding-top:10px;
+  font-size:22px;
+  font-weight:bold;
+  color:#d60000;
+}
+
+.order-button{
+  width:100%;
+  border:0;
+  background:#d60000;
+  color:white;
+  padding:17px;
+  border-radius:7px;
+  font-size:21px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.call-button{
+  display:block;
+  text-align:center;
+  background:#168a32;
+  color:white;
+  text-decoration:none;
+  padding:15px;
+  border-radius:7px;
+  margin-top:10px;
+  font-size:19px;
+  font-weight:bold;
+}
+
+.success{
+  display:none;
+  background:#d9ffd9;
+  color:#087508;
+  padding:15px;
+  text-align:center;
+  border-radius:7px;
+  margin-bottom:15px;
+  font-weight:bold;
+}
+
+.footer{
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+
+@media(max-width:500px){
+  h1{
+    font-size:27px;
+  }
+
+  .new{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+🔥 XTrime Power Special Offer 🔥
+</div>
+
+<div class="card">
+
+<!-- Product Image -->
+<img
+class="product-image"
+src="https://koreanmart24.com/uploads/6a9748f508508_800x800.jpg"
+alt="XTrime Power">
+
+<h1>XTrime Power</h1>
+
+<div class="price">
+<span class="old">৳2240</span>
+<span class="new">৳1120</span>
+</div>
+
+<div class="offer">
+🚚 সারা বাংলাদেশে FREE DELIVERY
+</div>
+
+<div class="features">
+<div>✅ Cash On Delivery</div>
+<div>🚚 সারা বাংলাদেশে Home Delivery</div>
+<div>📦 দ্রুত Delivery</div>
+<div>☎️ অর্ডারের পর ফোনে Confirmation</div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2 class="order-title">
+🛒 এখনই অর্ডার করুন
+</h2>
+
+<div id="success" class="success">
+✅ আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে!<br>
+আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবে।
+</div>
+
+<form id="orderForm">
+
+<label>আপনার নাম *</label>
+<input
+type="text"
+id="name"
+placeholder="আপনার নাম"
+required>
+
+<label>মোবাইল নম্বর *</label>
+<input
+type="tel"
+id="phone"
+placeholder="01XXXXXXXXX"
+required>
+
+<label>সম্পূর্ণ ঠিকানা *</label>
+<textarea
+id="address"
+placeholder="বাড়ি/গ্রাম, থানা, জেলা"
+required></textarea>
+
+<label>পরিমাণ</label>
+
+<div class="quantity">
+
+<button type="button" onclick="minus()">−</button>
+
+<input
+type="number"
+id="quantity"
+value="1"
+readonly>
+
+<button type="button" onclick="plus()">+</button>
+
+</div>
+
+<div class="summary">
+
+<div class="row">
+<span>Product Price</span>
+<span id="price">৳1120</span>
+</div>
+
+<div class="row">
+<span>Delivery Charge</span>
+<span>FREE</span>
+</div>
+
+<div class="row total">
+<span>Total</span>
+<span id="total">৳1120</span>
+</div>
+
+</div>
+
+<button
+type="submit"
+class="order-button"
+id="submitButton">
+
+🔥 অর্ডার কনফার্ম করুন
+
+</button>
+
+</form>
+
+
+<a
+href="tel:01947398906"
+class="call-button">
+
+📞 কল করে অর্ডার করুন
+
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h2>🚚 Delivery Information</h2>
+
+<br>
+
+<p>🇧🇩 সারা বাংলাদেশে Delivery</p>
+<p>🚚 Delivery Charge: <b>FREE</b></p>
+<p>💵 Cash On Delivery Available</p>
+<p>📦 অর্ডারের পর ফোনে Confirmation</p>
+
+</div>
+
+
+<div class="footer">
+© 2026 XTrime Power
+</div>
+
+</div>
+
+
+<script>
+
+const PRODUCT_PRICE = 1120;
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbyJ_P5bcpEFo_Jp18koErzVyc3KNxbNQbDyEZ2h5r9HZhERd7h9Y-lUSBw1h53H5-r-/exec";
+
+
+function updateTotal(){
+
+  let quantity =
+  Number(document.getElementById("quantity").value);
+
+  let total =
+  PRODUCT_PRICE * quantity;
+
+  document.getElementById("price").innerText =
+  "৳" + total;
+
+  document.getElementById("total").innerText =
+  "৳" + total;
+}
+
+
+function plus(){
+
+  let input =
+  document.getElementById("quantity");
+
+  input.value =
+  Number(input.value) + 1;
+
+  updateTotal();
+}
+
+
+function minus(){
+
+  let input =
+  document.getElementById("quantity");
+
+  let quantity =
+  Number(input.value);
+
+  if(quantity > 1){
+    input.value = quantity - 1;
+  }
+
+  updateTotal();
+}
+
+
+document
+.getElementById("orderForm")
+.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  let name =
+  document.getElementById("name").value;
+
+  let phone =
+  document.getElementById("phone").value;
+
+  let address =
+  document.getElementById("address").value;
+
+  let quantity =
+  Number(document.getElementById("quantity").value);
+
+  let total =
+  PRODUCT_PRICE * quantity;
+
+  let button =
+  document.getElementById("submitButton");
+
+  button.disabled = true;
+
+  button.innerText =
+  "অর্ডার পাঠানো হচ্ছে...";
+
+
+  let data = {
+
+    name:name,
+    phone:phone,
+    address:address,
+    quantity:quantity,
+    price:total
+
+  };
+
+
+  fetch(SCRIPT_URL, {
+
+    method:"POST",
+
+    mode:"no-cors",
+
+    body:JSON.stringify(data)
+
+  })
+  .then(function(){
+
+    document.getElementById("success")
+    .style.display = "block";
+
+    document.getElementById("orderForm")
+    .reset();
+
+    document.getElementById("quantity")
+    .value = 1;
+
+    updateTotal();
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  })
+  .catch(function(){
+
+    alert("অর্ডার পাঠানো যায়নি। আবার চেষ্টা করুন।");
+
+  })
+  .finally(function(){
+
+    button.disabled = false;
+
+    button.innerText =
+    "🔥 অর্ডার কনফার্ম করুন";
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
